@@ -1,0 +1,31 @@
+[project]
+name = "diffusion-lm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "transformers",
+    "improved-diffusion",
+    "spacy>=3.8.11",
+    "datasets>=4.5.0",
+    "huggingface-hub>=0.36.2",
+    "wandb>=0.25.0",
+    "mpi4py>=4.1.1",
+    "pillow>=12.1.1",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.0.0",
+    "pre-commit>=4.5.1",
+    "pytest>=9.0.2",
+    "pytest-cov>=7.0.0",
+    "ruff>=0.1.5",
+    "ty>=0.0.17",
+    "vulture>=2.14",
+]
+
+[tool.uv.sources]
+transformers = { path = "./transformers" }
+improved-diffusion = { path = "./improved-diffusion" }
